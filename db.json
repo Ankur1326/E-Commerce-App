@@ -1,19 +1,94 @@
 {
-  "posts": [
+  "seller": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "anil sudhu",
+      "password": "abc@123",
+      "email": "abc@gmail.com",
+      "id": 1
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "sam sudhu",
+      "password": "abc@123",
+      "email": "sam@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "sdva",
+      "password": "pass@01",
+      "email": "joe@test.com",
+      "id": 3
+    },
+    {
+      "name": "Ankur Swami",
+      "password": "pass@01",
+      "email": "joe@test.com",
+      "id": 4
+    },
+    {
+      "name": "",
+      "password": "pass@01",
+      "email": "joe@test.com",
+      "id": 5
+    },
+    {
+      "name": "",
+      "password": "pass@01",
+      "email": "joe@test.com",
+      "id": 6
+    },
+    {
+      "name": "Ankur Swami",
+      "password": "pass@01",
+      "email": "joe@test.com",
+      "id": 7
+    },
+    {
+      "name": "",
+      "password": "pass@01",
+      "email": "joe@test.com",
+      "id": 8
+    },
+    {
+      "name": "Ankur Swami",
+      "password": "pass@01",
+      "email": "joe@test.com",
+      "id": 9
+    },
+    {
+      "name": "",
+      "password": "pass@01",
+      "email": "joe@test.com",
+      "id": 10
+    },
+    {
+      "name": "Ankur Swami",
+      "password": "pass@01",
+      "email": "joe@test.com",
+      "id": 11
+    },
+    {
+      "name": "",
+      "password": "pass@01",
+      "email": "joe@test.com",
+      "id": 12
+    },
+    {
+      "name": "Ankur Swami",
+      "password": "pass@01",
+      "email": "joe@test.com",
+      "id": 13
+    },
+    {
+      "name": "",
+      "password": "pass@01",
+      "email": "joe@test.com",
+      "id": 14
+    },
+    {
+      "name": "Ankur Swami",
+      "password": "pass@01",
+      "email": "joe@test.com",
+      "id": 15
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
