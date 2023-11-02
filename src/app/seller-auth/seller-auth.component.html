@@ -1,0 +1,11 @@
+<div class="seller-auth h-[80vh] flex items-center justify-center">
+    <div class="signup flex flex-col items-center gap-8">
+        <h1 class="text-2xl font-bold text-violet-600">Seller Sign-Up</h1>
+        <form #sellerSignUp="ngForm" (ngSubmit)="singUp(sellerSignUp.value)" class="common-form flex flex-col gap-3 mb-24">
+            <input type="text" ngModel name="name" placeholder="Enter Name" class="border border-violet-500 pl-4 p-1 w-72" />
+            <input type="password" ngModel name="password" placeholder="Enter password" class="border border-violet-500 pl-4 p-1 w-72" />
+            <input type="email" ngModel name="email" placeholder="Enter Email" class="border border-violet-500 pl-4 p-1 w-72" />
+            <button class="form-button bg-gray-300 border border-violet-500 pl-4 p-1 w-72 font-bold" >SignUp</button>
+        </form>
+    </div>
+</div>
