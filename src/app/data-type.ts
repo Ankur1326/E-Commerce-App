@@ -3,3 +3,8 @@ export interface SingUp {
     passowrd: string,
     email: string
 } 
+
+export interface Login {
+    email: string,
+    password: string
+}

@@ -6,5 +6,9 @@ export const authGuard: CanActivateFn = (route, state) => {
   
   let sellerService = inject(SellerService)
   
+  if (localStorage.getItem('seller')) {
+    return true;
+  }
+  
   return sellerService.isSellerLoggedIn;
 };
