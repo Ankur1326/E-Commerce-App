@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ProductService } from '../services/product.service';
+import { Product } from '../data-type';
 
 @Component({
   selector: 'app-seller-home',
@@ -6,5 +8,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./seller-home.component.css']
 })
 export class SellerHomeComponent {
+  productList: undefined | Product[];
+  constructor(private Product: ProductService) { }
 
+  list() {
+    this.Product.productList().subscribe((result) => {
+      console.log(result);
+      this.productList = result;
+      console.log(this.productList);
+    })
+  }
+
+  ngOnInit() {
+    this.list();
+  }
+
+  removeProduct(id: number) {
+    this.Product.deleteProduct(id)
+    this.list();
+  }
 }

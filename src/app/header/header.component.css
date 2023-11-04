@@ -4,7 +4,6 @@
 }
 
 .nav h1 {
-    color: blueviolet;
     margin: 0;
     font-size: 40px;
 }
@@ -25,7 +24,6 @@
 
 .nav ul li a {
     text-decoration: none;
-    color: blueviolet;
 }
 
 .nav .nav-search {

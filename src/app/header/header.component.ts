@@ -25,8 +25,6 @@ export class HeaderComponent {
           if (localStorage.getItem('seller')) {
             let sellerData = localStorage.getItem('seller')
             let sellerDataInObject = sellerData && JSON.parse(sellerData)
-            console.log(sellerData);
-            console.log(sellerDataInObject);
             this.sellerName = sellerDataInObject.name;
           }
         } else {

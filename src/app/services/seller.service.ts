@@ -11,7 +11,7 @@ export class SellerService {
 
   isSellerLoggedIn = new BehaviorSubject<boolean>(false)
   isLoginError = new EventEmitter<boolean>(false)
-  
+
   constructor(private http: HttpClient, private router: Router) { }
 
   userSignUp(data: SingUp) {

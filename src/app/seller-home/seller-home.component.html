@@ -1,1 +1,22 @@
-<p>seller-home works!</p>
+<div class="container">
+    <h1 class="text-center text-3xl font-bold mb-3 mt-1">All Product List</h1>
+
+    <div *ngFor="let item of productList" class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4 border w-42 ">
+                <img src="{{item.image}}" class="w-80 h-48 border img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title text-xl font-bold">{{item.name}} (<small class="card-text">{{item.category}}</small>) </h5>
+                    <p class="card-text text-sm mt-[-10px]">{{item.description}}</p>
+
+                    <p class="card-text font-bold text-green-500">{{item.price}} ₹</p>
+                    <p class="card-text">Color: {{item.color}}</p>
+
+                </div>
+            </div>
+            <button (click)="removeProduct(item.id)" class="btn opacity btn-danger text-[9px] w-fit text-end absolute bottom-2 right-6"><i class="fa-solid fa-trash ">&nbsp;</i> Remove </button>
+        </div>
+    </div>
+</div>

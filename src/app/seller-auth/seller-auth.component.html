@@ -13,14 +13,14 @@
             <a (click)="openLoginOrSinUp()" class="text-violet-700 cursor-pointer active:underline">If you have already
                 account? click Login</a>
 
-            <span *ngIf="dataAlreadyExist" class="text-yellow-600">⚠️This account is already exist, You can login</span>
+            <span *ngIf="dataAlreadyExist" class="text-danger">⚠️This account is already exist, You can login</span>
         </form>
     </div>
 
     <!-- Login form -->
     <div *ngIf="show" class="login flex flex-col items-center gap-8">
         <h1 class="text-2xl font-bold text-violet-600">Seller Login</h1>
-        <p class="text-red-500">{{authError}}</p>
+        <p class="text-danger">{{authError}}</p>
         <form #sellerLogin="ngForm" (ngSubmit)="Login(sellerLogin.value)" class="common-form flex flex-col gap-3 mb-24">
             <input type="email" ngModel name="email" placeholder="Enter Email"
                 class="border border-violet-500 pl-4 p-1 w-72" />

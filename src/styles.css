@@ -6,9 +6,20 @@
 
 body {
     font-family: sans-serif;
+    /* background-color: #444; */
 }
 
 .container {
     /* margin-left: 5%; */
     /* margin-right: 5%; */
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.light-mode {
+    background-color: #fff;
+    color: black;
 }
