@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { Product } from '../data-type';
+import {  } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
   selector: 'app-seller-home',

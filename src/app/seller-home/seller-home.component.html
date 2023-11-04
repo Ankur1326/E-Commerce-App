@@ -8,7 +8,8 @@
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title text-xl font-bold">{{item.name}} (<small class="card-text">{{item.category}}</small>) </h5>
+                    <h5 class="card-title text-xl font-bold">{{item.name}} (<small
+                            class="card-text">{{item.category}}</small>) </h5>
                     <p class="card-text text-sm mt-[-10px]">{{item.description}}</p>
 
                     <p class="card-text font-bold text-green-500">{{item.price}} ₹</p>
@@ -16,7 +17,9 @@
 
                 </div>
             </div>
-            <button (click)="removeProduct(item.id)" class="btn opacity btn-danger text-[9px] w-fit text-end absolute bottom-2 right-6"><i class="fa-solid fa-trash ">&nbsp;</i> Remove </button>
+            <button (click)="removeProduct(item.id)"
+                class="btn opacity btn-danger text-[9px] w-fit text-end absolute bottom-2 right-6"><i
+                    class="fa-solid fa-trash ">&nbsp;</i> Remove </button>
         </div>
     </div>
 </div>
