@@ -1,5 +1,5 @@
 <nav class="nav">
-    <h1><a routerLink="/" class="text-primary">E-COMM</a></h1>
+    <h1><a routerLink="/" class="">E-COMM</a></h1>
     <div *ngIf="menuType==='default'" class="nav-search mt-3">
         <input type="text" placeholder="Search for Product" />
         <button class="">Search</button>
@@ -7,16 +7,16 @@
 
     <div [ngSwitch]="menuType">
         <ul *ngSwitchCase="'default'">
-            <li><a routerLink="/seller-auth" class="text-primary">Seller</a></li>
-            <li><a routerLink="/" class="text-primary">Home</a></li>
-            <li><a href="#" class="text-primary">Login</a></li>
-            <li><a href="#" class="text-primary">Cart(0)</a></li>
+            <li><a routerLink="/seller-auth" class="">Seller</a></li>
+            <li><a routerLink="/" class="">Home</a></li>
+            <li><a href="#" class="">Login</a></li>
+            <li><a href="#" class="">Cart(0)</a></li>
         </ul>
         <ul *ngSwitchCase="'seller'">
-            <li><a routerLink="/seller-add-product" class="text-primary">Add Product</a></li>
-            <li><a routerLink="/seller-home" class="text-primary">Product List</a></li>
-            <li><a (click)="logOut()" class="cursor-pointer" class="text-primary">Logout</a></li>
-            <li><a href="#" class="text-primary">{{sellerName}}</a></li>
+            <li><a routerLink="/seller-add-product" class="">Add Product</a></li>
+            <li><a routerLink="/seller-home" class="">Product List</a></li>
+            <li><a (click)="logOut()" class="cursor-pointer" class="">Logout</a></li>
+            <li><a href="#" class="">{{sellerName}}</a></li>
         </ul>
     </div>
 </nav>

@@ -32,16 +32,16 @@
 
 .nav .nav-search input {
     flex: 1;
-    color: blueviolet;
-    border: 1px solid blueviolet;
+    /* color: blueviolet; */
+    /* border: 1px solid blueviolet; */
     height: 35px;
     border-right: 0px;
     width: 70%;
 }
 
 .nav .nav-search button {
-    color: blueviolet;
-    border: 1px solid blueviolet;
+    /* color: blueviolet; */
+    /* border: 1px solid blueviolet; */
     height: 38px;
     border-left: 0px;
     width: 20%;
