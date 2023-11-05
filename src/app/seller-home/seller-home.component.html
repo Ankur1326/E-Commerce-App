@@ -8,8 +8,7 @@
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title text-xl font-bold">{{item.name}} (<small
-                            class="card-text">{{item.category}}</small>) </h5>
+                    <h5 class="card-title text-xl font-bold">{{item.name}} (<small class="card-text">{{item.category}}</small>) </h5>
                     <p class="card-text text-sm mt-[-10px]">{{item.description}}</p>
 
                     <p class="card-text font-bold text-green-500">{{item.price}} ₹</p>
@@ -17,13 +16,8 @@
 
                 </div>
             </div>
-            <button (click)="removeProduct(item.id)"
-                class="text-red-600 btn   border-red-500 hover:border-red-600 text-[11px] w-fit text-end absolute bottom-2 right-6"><fa-icon
-                    [icon]="deleteIcon"></fa-icon>&nbsp; Remove </button>
-            <button routerLink="/seller-update-product/{{item.id}}" 
-                class="text-yellow-600 btn   border-yellow-500 hover:border-yellow-600 hover:text-yellow-800 text-[11px] w-fit text-end absolute bottom-2 right-28"><fa-icon
-                    [icon]="updateIcon"></fa-icon>&nbsp; Update </button>
-
+            <button (click)="removeProduct(item.id)" class="text-red-600 btn   border-red-500 hover:border-red-600 text-[11px] w-fit text-end absolute bottom-2 right-6"><fa-icon [icon]="deleteIcon"></fa-icon>&nbsp; Remove </button>
+            <button routerLink="/seller-update-product/{{item.id}}" class="text-yellow-600 btn   border-yellow-500 hover:border-yellow-600 hover:text-yellow-800 text-[11px] w-fit text-end absolute bottom-2 right-28"><fa-icon [icon]="updateIcon"></fa-icon>&nbsp; Update </button>
         </div>
     </div>
 </div>
