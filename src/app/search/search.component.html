@@ -1,0 +1,19 @@
+<div *ngFor="let item of searchedProductData" class="col flex flex-col items-center justify-center">
+    <div class="card mb-3" style="max-width: 640px; padding: 10px 16px;" >
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <a routerLink="/details/{{item.id}}"><img src={{item.image}} class="card-img" alt={{item.name}} /></a>
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title font-bold"> {{item.name}}</h5>
+                    <h5 class="card-title text-green-500">Rs. {{item.price}}</h5>
+                    <p class="card-text">{{item.description}}</p>
+                    <p class="card-text"><small class="text-muted">Color: {{item.color}}</small></p>
+                    <p class="card-text"><small class="text-muted">Category: {{item.category}}</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<h1 *ngIf="searchedDataFound">Result is Not Found</h1>

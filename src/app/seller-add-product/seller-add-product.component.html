@@ -1,5 +1,5 @@
 <div class="m-auto w-fit ">
-    <h1 class="text-center mt-7 mb-3 text-2xl font-bold ">Add New Product</h1>
+    <h1 class="text-center mt-7 mb-3 text-2xl font-bold text-[#386BC0]">Add New Product</h1>
     <p class="text-center text-green-500 font-bold opacity-70 mb-2">{{addProductMessage}}</p>
     <form #addProduct="ngForm" (ngSubmit)="addProductSubmit(addProduct.value)" class="flex flex-col gap-7">
         <input type="text" ngModel name="name" placeholder="Enter Product Name" class="form-control border pl-4 p-1 w-72" />
@@ -9,6 +9,6 @@
         <textarea type="text" ngModel name="description" placeholder="Enter product Description" class="form-control border pl-4 p-1 w-72"></textarea>
         <input type="text" ngModel name="image" placeholder="Enter product URL"
             class="form-control border pl-4 p-1 w-72" />
-        <button class="btn btn-dark">Add Product</button>
+        <button class="btn bg-[#386BC0] font-bold text-white">Add Product</button>
     </form>
 </div>

@@ -68,10 +68,11 @@
     padding: 0;
 }
 
-.searchSuggession li{
+.searchSuggession li {
     border: 1px solid #ddd;
     padding: 5px 11px;
 }
+
 .searchSuggession li:hover {
     background-color: #eaeaea;
     padding: 5px 11px;

@@ -1,16 +1,16 @@
 <div class="seller-auth h-[80vh] flex items-center justify-center">
     <div *ngIf="!show" class="signup flex flex-col items-center gap-8">
-        <h1 class="text-2xl font-bold text-violet-600">Seller Sign-Up</h1>
+        <h1 class="text-2xl font-bold text-[#386BC0]">Seller Sign-Up</h1>
         <form #sellerSignUp="ngForm" (ngSubmit)="singUp(sellerSignUp.value)"
             class="common-form flex flex-col gap-3 mb-24">
             <input type="text" ngModel name="name" placeholder="Enter Name"
-                class="border border-violet-500 pl-4 p-1 w-72" />
+                class="border border-[#386BC0] pl-4 p-1 w-72" />
             <input type="password" ngModel name="password" placeholder="Enter password"
-                class="border border-violet-500 pl-4 p-1 w-72" />
+                class="border border-[#386BC0] pl-4 p-1 w-72" />
             <input type="email" ngModel name="email" placeholder="Enter Email"
-                class="border border-violet-500 pl-4 p-1 w-72" />
-            <button class="form-button bg-gray-300 border border-violet-500 pl-4 p-1 w-72 font-bold">SignUp</button>
-            <a (click)="openLoginOrSinUp()" class="text-violet-700 cursor-pointer active:underline">If you have already
+                class="border border-[#386BC0] pl-4 p-1 w-72" />
+            <button class="form-button bg-[#386BC0] text-white border border-[#386BC0] pl-4 p-1 w-72 font-bold">SignUp</button>
+            <a (click)="openLoginOrSinUp()" class="text-[#386BC0] cursor-pointer active:underline">If you have already
                 account? click Login</a>
 
             <span *ngIf="dataAlreadyExist" class="text-danger">⚠️This account is already exist, You can login</span>
@@ -19,15 +19,15 @@
 
     <!-- Login form -->
     <div *ngIf="show" class="login flex flex-col items-center gap-8">
-        <h1 class="text-2xl font-bold text-violet-600">Seller Login</h1>
+        <h1 class="text-2xl font-bold text-[#386BC0]">Seller Login</h1>
         <p class="text-danger">{{authError}}</p>
         <form #sellerLogin="ngForm" (ngSubmit)="Login(sellerLogin.value)" class="common-form flex flex-col gap-3 mb-24">
             <input type="email" ngModel name="email" placeholder="Enter Email"
-                class="border border-violet-500 pl-4 p-1 w-72" />
+                class="border border-[#386BC0] pl-4 p-1 w-72" />
             <input type="password" ngModel name="password" placeholder="Enter password"
-                class="border border-violet-500 pl-4 p-1 w-72" />
-            <button class="form-button bg-gray-300 border border-violet-500 pl-4 p-1 w-72 font-bold">Login</button>
-            <a (click)="openLoginOrSinUp()" class="text-violet-700 cursor-pointer active:underline">If you have already
+                class="border border-[#386BC0] pl-4 p-1 w-72" />
+            <button class="form-button bg-[#386BC0] text-white border-[#386BC0] pl-4 p-1 w-72 font-bold">Login</button>
+            <a (click)="openLoginOrSinUp()" class="text-[#386BC0] cursor-pointer active:underline">If you have already
                 account? click Sign Up</a>
         </form>
     </div>

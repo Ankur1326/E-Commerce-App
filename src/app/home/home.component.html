@@ -16,8 +16,8 @@
         <div *ngFor="let item of trendyProducts" class="col-sm-3">
             <div class="card">
                 <div class="card-image">
-                    <img class="img-responsive"
-                        src="{{item.image}}">
+                    <a routerLink="/details/{{item.id}}"><img src={{item.image}} class="card-img" alt={{item.name}} />
+                        <img class="img-responsive" src="{{item.image}}"></a>
                 </div>
 
                 <div class="card-content text-center">
@@ -28,7 +28,7 @@
                 </div>
 
                 <div class="card-action">
-                    <a href="#" target="new_blank">View Details</a>
+                    <a routerLink="/details/{{item.id}}" target="new_blank">View Details</a>
                     <a href="#" target="new_blank">Add to Card</a>
                 </div>
             </div>

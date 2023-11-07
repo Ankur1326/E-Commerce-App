@@ -1,0 +1,31 @@
+<div class="col card w-fit m-auto flex flex-col items-center justify-center">
+    <div class="flex justify-between no-gutters">
+        <div class="col-md-6">
+            <a><img src={{productData?.image}} class="card-img " style="width: 300px;" alt={{productData?.name}} /></a>
+        </div>
+        <div class="col-md-8">
+            <div class="card-body flex flex-col">
+                <h5 class="card-title font-bold text-3xl">{{productData?.name}}</h5>
+                <h5 class="card-title text-green-500 ">Rs. {{productData?.price}}</h5>
+                <p class="card-text w-[70%]">{{productData?.description}}</p>
+                <div class="card-text">Color:
+                <h3 [style.backgroundColor]="productData?.color" class="border w-8 h-8 rounded-full"></h3>
+                </div>
+                <p class="card-text"><small class="text-muted">Category: {{productData?.category}}</small></p>
+                <div class="mt-3">
+                    <button (click)="handleQuantity('minus')" class="font-bold pl-3 pr-3 text-yellow-500" style="border: 1px solid rgb(216, 183, 76);" ><i
+                            class="fa-solid fa-minus"></i></button>
+                    <input type="text" value="{{productQuantity}}" class="pointer-events-none font-b w-8 text-center" style="border: 1px solid rgb(216, 183, 76);">
+                    <button (click)="handleQuantity('plus')" class=" font-bold pl-3 pr-3 text-yellow-500" style="border: 1px solid rgb(216, 183, 76);"><i
+                            class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="card-action mt-3">
+                    <a class="text-yellow-500 "
+                        style="border: 1px solid rgb(216, 183, 76); padding: 4px 6px;">Buy Now</a>
+                    <a href="#" class="text-yellow-500 ml-2"
+                        style="border: 1px solid rgb(216, 183, 76); padding: 4px 6px;">Add to Card</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

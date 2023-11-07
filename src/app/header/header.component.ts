@@ -13,26 +13,30 @@ export class HeaderComponent {
   sellerName: string = '';
   searchSuggestionResult: undefined | Product[];
   length: number = 5
+  userName: string = '';
 
   constructor(private router: Router, private Product: ProductService) { }
 
   ngOnInit() {
     this.router.events.subscribe((val: any) => {
-      // console.log(val.url);
       if (val.url) {
-        // console.warn(val.url);
 
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
-          // console.log('In seller area');
-          this.menuType = 'seller'
-
           if (localStorage.getItem('seller')) {
             let sellerData = localStorage.getItem('seller')
             let sellerDataInObject = sellerData && JSON.parse(sellerData)
             this.sellerName = sellerDataInObject.name;
+            this.menuType = 'seller'
           }
-        } else {
-          // console.log('outside seller');
+
+        }
+        else if (localStorage.getItem('user')) {
+          let userData = localStorage.getItem('user') 
+          let sellerDataInObject = userData && JSON.parse(userData)
+          this.userName = sellerDataInObject.name;
+          this.menuType = "user";
+        }
+        else {
           this.menuType = 'default'
         }
       }
@@ -44,25 +48,38 @@ export class HeaderComponent {
     localStorage.removeItem('seller')
     this.router.navigate(['/'])
   }
+  
+  userLogout() {
+    localStorage.removeItem('user')
+    this.router.navigate(['/user-auth'])
+    
+  }
 
   searchProduct(query: KeyboardEvent) {
     if (query) {
       const element = query.target as HTMLInputElement
-      console.log(element.value);
       this.Product.searchProduct(element.value).subscribe((result: any) => {
-        console.log(result);
-        
-        if (result.length>5) {
-          result.length=this.length;
+
+        if (result.length > 5) {
+          result.length = this.length;
         }
         this.searchSuggestionResult = result
       })
     }
   }
 
-
   hideSearchSuggestionResult() {
     this.searchSuggestionResult = undefined;
   }
-  
+
+  redirectToDetails(id: number) {
+    this.router.navigate([`details/${id}`])
+  }
+
+  submitSearch(value: string) {
+    console.log(value);
+    this.router.navigate([`search/${value}`])
+  }
+
+
 }

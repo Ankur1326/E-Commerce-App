@@ -17,6 +17,24 @@
       "password": "pass@01",
       "email": "joe@test.com",
       "id": 3
+    },
+    {
+      "name": "Ankur Swamiq",
+      "password": "pass@01",
+      "email": "joe@test.com",
+      "id": 4
+    },
+    {
+      "name": "Z",
+      "password": "pass@01",
+      "email": "joe@test.com",
+      "id": 5
+    },
+    {
+      "name": "",
+      "password": "pass@01",
+      "email": "joe@test.com",
+      "id": 6
     }
   ],
   "products": [
@@ -109,6 +127,20 @@
       "description": "POVA 5 Pro 5G starting from ₹12299, including additional offers",
       "image": "https://m.media-amazon.com/images/I/41gWa+F0PIL._AC_UF452,452_FMjpg_.jpg",
       "id": 11
+    }
+  ],
+  "user": [
+    {
+      "name": "Ankur",
+      "email": "abc@gmail.com",
+      "password": "abc@123",
+      "id": 1
+    },
+    {
+      "name": "Ankur",
+      "email": "abc@gmail.com",
+      "password": "abc@123",
+      "id": 1
     }
   ]
 }

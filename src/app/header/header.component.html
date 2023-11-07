@@ -1,12 +1,12 @@
-<nav class="nav">
+<nav class="nav mb-4">
     <h1><a routerLink="/" class="logo">E-COMM</a></h1>
     <div *ngIf="menuType==='default'" class="nav-search mt-3 relative">
-        <input (keyup)="searchProduct($event)" (blur)="hideSearchSuggestionResult()" class="border" type="text" placeholder="Search for Product" />
-        <button class="border bg-gray-200">Search</button>
+        <input #searchInput (keyup)="searchProduct($event)" (blur)="hideSearchSuggestionResult()" class="border"
+            type="text" placeholder="Search for Product" />
+        <button (click)="submitSearch(searchInput.value)" class="border bg-gray-200">Search</button>
         <ul class="searchSuggession">
-            <li routerLink="" *ngFor="let item of searchSuggestionResult">
-                <!-- <a href="">{{item.name}}</a> -->
-                {{item.name}}
+            <li *ngFor="let item of searchSuggestionResult">
+                <a (mousedown)="redirectToDetails(item.id)">{{item.name}}</a>
             </li>
         </ul>
     </div>
@@ -15,14 +15,23 @@
         <ul *ngSwitchCase="'default'">
             <li><a routerLink="/seller-auth" class="">Seller</a></li>
             <li><a routerLink="/" class="">Home</a></li>
-            <li><a href="#" class="">Login</a></li>
+            <li><a routerLink="/user-auth" class="">Sign Up/Login</a></li>
+            <li><a href="#" class="">Cart(0)</a></li>
+        </ul>
+        <ul *ngSwitchCase="'user'">
+            <li><a routerLink="/seller-auth" class="">Seller</a></li>
+            <li><a routerLink="/" class="">Home</a></li>
+            <li><a routerLink="/user-auth" class="">{{userName | titlecase}}</a></li>
+            <li><a (click)="userLogout()" class="cursor-pointer">Logout</a></li>
             <li><a href="#" class="">Cart(0)</a></li>
         </ul>
         <ul *ngSwitchCase="'seller'">
             <li><a routerLink="/seller-add-product" class="">Add Product</a></li>
             <li><a routerLink="/seller-home" class="">Product List</a></li>
-            <li><a (click)="logOut()" class="cursor-pointer" class="">Logout</a></li>
+            <li><a (click)="logOut()" class="cursor-pointer">Logout</a></li>
             <li><a href="#" class="">{{sellerName}}</a></li>
         </ul>
     </div>
 </nav>
+
+
