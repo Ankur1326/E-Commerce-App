@@ -16,14 +16,14 @@
             <li><a routerLink="/seller-auth" class="">Seller</a></li>
             <li><a routerLink="/" class="">Home</a></li>
             <li><a routerLink="/user-auth" class="">Sign Up/Login</a></li>
-            <li><a href="#" class="">Cart(0)</a></li>
+            <li><a href="#" class="">Cart({{cartItem}})</a></li>
         </ul>
         <ul *ngSwitchCase="'user'">
             <li><a routerLink="/seller-auth" class="">Seller</a></li>
             <li><a routerLink="/" class="">Home</a></li>
             <li><a routerLink="/user-auth" class="">{{userName | titlecase}}</a></li>
             <li><a (click)="userLogout()" class="cursor-pointer">Logout</a></li>
-            <li><a href="#" class="">Cart(0)</a></li>
+            <li><a href="#" class="">Cart({{cartItem}})</a></li>
         </ul>
         <ul *ngSwitchCase="'seller'">
             <li><a routerLink="/seller-add-product" class="">Add Product</a></li>

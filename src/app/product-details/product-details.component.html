@@ -20,10 +20,9 @@
                             class="fa-solid fa-plus"></i></button>
                 </div>
                 <div class="card-action mt-3">
-                    <a class="text-yellow-500 "
-                        style="border: 1px solid rgb(216, 183, 76); padding: 4px 6px;">Buy Now</a>
-                    <a href="#" class="text-yellow-500 ml-2"
-                        style="border: 1px solid rgb(216, 183, 76); padding: 4px 6px;">Add to Card</a>
+                    <button class="text-yellow-500 " style="border: 1px solid rgb(216, 183, 76); padding: 4px 6px;">Buy Now</button>
+                    <button  *ngIf="removeCart" (click)="removeToCard(productData?.id)" class="text-yellow-500 ml-2" style="border: 1px solid rgb(216, 183, 76); padding: 4px 6px;">Remove to Card</button>
+                    <button  *ngIf="!removeCart" (click)="addToCard()" class="text-yellow-500 ml-2" style="border: 1px solid rgb(216, 183, 76); padding: 4px 6px;">Add to Card</button>
                 </div>
             </div>
         </div>

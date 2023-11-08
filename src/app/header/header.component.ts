@@ -14,6 +14,7 @@ export class HeaderComponent {
   searchSuggestionResult: undefined | Product[];
   length: number = 5
   userName: string = '';
+  cartItem:number = 0;
 
   constructor(private router: Router, private Product: ProductService) { }
 
@@ -40,7 +41,13 @@ export class HeaderComponent {
           this.menuType = 'default'
         }
       }
-
+    })
+    let cartData = localStorage.getItem('localCart')
+    if (cartData) {
+      this.cartItem = JSON.parse(cartData).length;
+    }
+    this.Product.cartData.subscribe((items) => {
+      this.cartItem = items.length
     })
   }
 
