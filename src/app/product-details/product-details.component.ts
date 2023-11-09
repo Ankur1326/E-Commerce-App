@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { ActivatedRoute } from '@angular/router';
-import { Product } from '../data-type';
+import { Cart, Product } from '../data-type';
 
 @Component({
   selector: 'app-product-details',
@@ -12,6 +12,8 @@ export class ProductDetailsComponent {
 
   productData: undefined | Product;
   removeCart: boolean = false
+  cartData: Product | undefined
+  
   constructor(private product: ProductService, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -26,15 +28,28 @@ export class ProductDetailsComponent {
 
       let cartData = localStorage.getItem('localCart')
       if (productId && cartData) {
-        let items = JSON.parse(cartData)
+        let items: Product[] = JSON.parse(cartData)
         items = items.filter((item: Product) => productId === item.id.toString())
-
 
         if (items.length) {
           this.removeCart = true;
         } else {
           this.removeCart = false
         }
+      }
+
+      let user = localStorage.getItem('user')
+      if (user) {
+        let userId = user && JSON.parse(user).id;
+        this.product.getCartList(userId)
+
+        this.product.cartData.subscribe((result) => {
+          let item = result.filter((item: Product) => productId?.toString() === item.productId.toString())
+          if (item.length) {
+            this.cartData = item[0];
+            this.removeCart = true
+          }
+        })
 
       }
     })
@@ -58,15 +73,40 @@ export class ProductDetailsComponent {
       if (!localStorage.getItem('user')) { // if user is'nt logged in 
         this.product.localAddToCard(this.productData)
         this.removeCart = true
+      } else {
+        console.log('user is logged in');
+        let user = localStorage.getItem('user');
+        let userId: number = user && JSON.parse(user).id;
+
+        let cartData: Cart = {
+          ...this.productData,
+          productId: this.productData.id,
+          userId
+        }
+        delete cartData.id;
+
+        this.product.addToCart(cartData).subscribe((result) => {
+          if (result) {
+            this.product.getCartList(userId)
+            this.removeCart = true
+          }
+        })
       }
-      // console.log(this.productData);
     }
 
   }
 
   removeToCard(productId: undefined | number) {
-    this.product.removeItemFromCart(productId)
-    this.removeCart = false
-    
+    if (!localStorage.getItem('user')) {
+      this.product.removeItemFromCart(productId)
+      
+    }else {
+      this.cartData && this.product.removeToCart(this.cartData.id).subscribe((result) => {
+        let user = localStorage.getItem('user');
+        let userId: number = user && JSON.parse(user).id;
+        this.product.getCartList(userId)
+      })
+    }
+    this.removeCart = false;
   }
 }

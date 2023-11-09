@@ -120,6 +120,86 @@
       "email": "joe@test.com",
       "password": "pass@01",
       "id": 2
+    },
+    {
+      "name": "yash swami",
+      "email": "joe@test.com",
+      "password": "pass@01",
+      "id": 3
+    }
+  ],
+  "cart": [
+    {
+      "name": "Watch 3",
+      "price": "700",
+      "color": "black",
+      "category": "Electronic",
+      "description": "Smartwatches from Rs.899 - Fire-boltt, Noise, Boat & More as",
+      "image": "https://m.media-amazon.com/images/I/41Hr4Mn6pCL._AC_UF452,452_FMjpg_.jpg",
+      "id": 4,
+      "quantity": 1,
+      "productId": 4,
+      "userId": 2
+    },
+    {
+      "name": "HP Thin 14 ",
+      "price": "100000",
+      "color": "Gray",
+      "category": "laptop",
+      "description": "valuable product, battery life is 8 hr plus, for home use laptop",
+      "image": "data:image/jpeg;base64,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",
+      "id": 2,
+      "quantity": 7,
+      "productId": 2,
+      "userId": 2
+    },
+    {
+      "name": "Redmi LED",
+      "price": "22000",
+      "color": "black",
+      "category": "Electronic ",
+      "description": "Crackling deals with 4k TVs at lowest prices of the year",
+      "image": "https://m.media-amazon.com/images/I/41aUYEd1UZL._AC_UF452,452_FMjpg_.jpg",
+      "id": 7,
+      "quantity": 4,
+      "productId": 7,
+      "userId": 2
+    },
+    {
+      "name": "Watch 3",
+      "price": "700",
+      "color": "black",
+      "category": "Electronic",
+      "description": "Smartwatches from Rs.899 - Fire-boltt, Noise, Boat & More as",
+      "image": "https://m.media-amazon.com/images/I/41Hr4Mn6pCL._AC_UF452,452_FMjpg_.jpg",
+      "quantity": 1,
+      "productId": 4,
+      "userId": 2,
+      "id": 8
+    },
+    {
+      "name": "Watch 3",
+      "price": "700",
+      "color": "black",
+      "category": "Electronic",
+      "description": "Smartwatches from Rs.899 - Fire-boltt, Noise, Boat & More as",
+      "image": "https://m.media-amazon.com/images/I/41Hr4Mn6pCL._AC_UF452,452_FMjpg_.jpg",
+      "quantity": 1,
+      "productId": 4,
+      "userId": 2,
+      "id": 9
+    },
+    {
+      "name": "Watch 3",
+      "price": "700",
+      "color": "black",
+      "category": "Electronic",
+      "description": "Smartwatches from Rs.899 - Fire-boltt, Noise, Boat & More as",
+      "image": "https://m.media-amazon.com/images/I/41Hr4Mn6pCL._AC_UF452,452_FMjpg_.jpg",
+      "quantity": 1,
+      "productId": 4,
+      "userId": 2,
+      "id": 10
     }
   ]
 }

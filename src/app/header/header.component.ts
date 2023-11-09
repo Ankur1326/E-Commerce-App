@@ -36,6 +36,7 @@ export class HeaderComponent {
           let sellerDataInObject = userData && JSON.parse(userData)
           this.userName = sellerDataInObject.name;
           this.menuType = "user";
+          this.Product.getCartList(sellerDataInObject.id)
         }
         else {
           this.menuType = 'default'
@@ -59,7 +60,7 @@ export class HeaderComponent {
   userLogout() {
     localStorage.removeItem('user')
     this.router.navigate(['/user-auth'])
-    
+    this.Product.cartData.emit([])
   }
 
   searchProduct(query: KeyboardEvent) {
