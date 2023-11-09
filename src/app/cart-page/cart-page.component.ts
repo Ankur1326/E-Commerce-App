@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { ProductService } from '../services/product.service';
 import { Cart, cartPriceSummary } from '../data-type';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart-page',
@@ -19,7 +20,7 @@ export class CartPageComponent {
     total: 0
   }
 
-  constructor(private product: ProductService) { }
+  constructor(private product: ProductService, private router: Router) { }
 
   ngOnInit(): void {
     this.product.currentCart().subscribe((result: any) => {
@@ -37,6 +38,10 @@ export class CartPageComponent {
       this.cartSummary.total = price + (price/10) + 100 - (price/10)
       console.log(this.cartSummary);
     })
-    
   }
+
+  checkut() {
+    this.router.navigate(['/checkout'])
+  }
+  
 }
