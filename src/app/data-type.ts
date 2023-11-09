@@ -41,3 +41,13 @@ export interface cartPriceSummary {
     delivery: number,
     total: number
 }
+
+export interface Order {
+    email: string, 
+    address: string, 
+    contact: string,
+    totalPrice: number,
+    userId: string,
+    id: number
+    // email, address, contact, totalPrice, userId
+}

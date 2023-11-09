@@ -4,7 +4,7 @@
             <div class="accordion" id="accordionPayment">
                 <div class="accordion-item mb-3 p-7">
                     <h1 class="font-bold text-3xl text-center mb-5 text-[#198754]">Checkout</h1>
-                    <form>
+                    <form #orderData="ngForm" (ngSubmit)="orderNow(orderData.value)">
                         <!-- Email input -->
                         <div class="form-outline mb-4">
                             <label class="form-label" for="Email">Email</label>
@@ -19,15 +19,13 @@
                                 placeholder="Enter User Address" />
                         </div>
 
-                        <!-- Password input -->
+                        <!-- contact -->
                         <div class="form-outline mb-4">
-                            <label class="form-label" for="registerPassword">Password</label>
-                            <input type="text" id="registerPassword" class="form-control" name="password" ngModel
-                                placeholder="Enter contact details" />
+                            <label class="form-label" for="contact">Contact</label>
+                            <input type="text" id="" class="form-control" name="contact" placeholder="Enter contact details" ngModel />
                         </div>
                         <!-- Submit button -->
-                        <button type="submit"
-                            class="bg-[#198754] text-white pt-2 pb-2 pl-6 pr-6 rounded-lg w-[100%] hover:bg-[#198754d4] mb-3">Order
+                        <button type="submit" class="bg-[#198754] text-white pt-2 pb-2 pl-6 pr-6 rounded-lg w-[100%] hover:bg-[#198754d4] mb-3">Order
                             Now</button>
                     </form>
 
@@ -52,7 +50,7 @@
                     <h6 class="card-title mb-3">Order Summary</h6>
                     <hr>
                     <div class="d-flex justify-content-between mb-4 small">
-                        <span>TOTAL</span> <strong class="text-dark">$224.50</strong>
+                        <span>TOTAL</span> <strong class="text-dark">₹{{totalPrice}}</strong>
                     </div>
                     <button class="btn btn-success w-100 mt-2">Place order</button>
                 </div>

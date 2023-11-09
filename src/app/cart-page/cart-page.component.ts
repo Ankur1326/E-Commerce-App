@@ -43,5 +43,5 @@ export class CartPageComponent {
   checkut() {
     this.router.navigate(['/checkout'])
   }
-  
+
 }
