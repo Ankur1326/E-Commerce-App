@@ -109,4 +109,8 @@ export class ProductDetailsComponent {
     }
     this.removeCart = false;
   }
+
+  buyNow(productId: number) {
+    alert('This feature is not implemented ')
+  }
 }

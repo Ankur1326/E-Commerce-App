@@ -5,18 +5,6 @@
       "password": "abc@123",
       "email": "abc@gmail.com",
       "id": 1
-    },
-    {
-      "name": "sam sudhu",
-      "password": "abc@123",
-      "email": "sam@gmail.com",
-      "id": 2
-    },
-    {
-      "name": "Ankur Swami",
-      "password": "pass@01",
-      "email": "joe@test.com",
-      "id": 3
     }
   ],
   "products": [
@@ -104,31 +92,26 @@
   ],
   "user": [
     {
-      "name": "Ankur",
+      "name": "anil sudhu",
       "email": "abc@gmail.com",
       "password": "abc@123",
       "id": 1
-    },
-    {
-      "name": "Ankur",
-      "email": "abc@gmail.com",
-      "password": "abc@123",
-      "id": 1
-    },
-    {
-      "name": "Ankur Swami",
-      "email": "joe@test.com",
-      "password": "pass@01",
-      "id": 2
-    },
-    {
-      "name": "yash swami",
-      "email": "joe@test.com",
-      "password": "pass@01",
-      "id": 3
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "name": "Watch 3",
+      "price": "700",
+      "color": "black",
+      "category": "Electronic",
+      "description": "Smartwatches from Rs.899 - Fire-boltt, Noise, Boat & More as",
+      "image": "https://m.media-amazon.com/images/I/41Hr4Mn6pCL._AC_UF452,452_FMjpg_.jpg",
+      "quantity": 6,
+      "productId": 4,
+      "userId": 1,
+      "id": 1
+    }
+  ],
   "orders": [
     {
       "email": "",
@@ -137,6 +120,14 @@
       "totalPrice": 1600,
       "userId": 2,
       "id": 12
+    },
+    {
+      "email": "",
+      "address": "",
+      "contact": "",
+      "totalPrice": 15000100,
+      "userId": 1,
+      "id": 13
     }
   ]
 }
