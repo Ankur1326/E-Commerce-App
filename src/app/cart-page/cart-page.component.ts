@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class CartPageComponent {
   deleteIcon = faTrash
   cartData: Cart[] | undefined;
+  
   cartSummary: cartPriceSummary = {
     price: 0,
     discount: 0,
@@ -31,17 +32,21 @@ export class CartPageComponent {
         price = price + (+item.price)
       });
       console.log(price);
-      this.cartSummary.price = price  
-      this.cartSummary.discount = price/10  
-      this.cartSummary.tax = price/10  
-      this.cartSummary.delivery = 100  
-      this.cartSummary.total = price + (price/10) + 100 - (price/10)
+      this.cartSummary.price = price
+      this.cartSummary.discount = price / 10
+      this.cartSummary.tax = price / 10
+      this.cartSummary.delivery = 100
+      this.cartSummary.total = price + (price / 10) + 100 - (price / 10)
       console.log(this.cartSummary);
     })
   }
 
-  checkut() {
+  checkout() {
     this.router.navigate(['/checkout'])
   }
 
+  // removeItem(productId: number) {
+  //   this.product.deleteCartItem(productId)
+      
+  //   }
 }

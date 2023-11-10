@@ -19,7 +19,9 @@
                             <div class="d-flex gap-4 flex-row align-items-center mr-[10%]">
                                 <span class="d-block">Quantity : {{cart.quantity}}</span>
                                 <span class="d-block ml-5 font-weight-bold">Price : ₹{{cart.price}}</span>
-                                <fa-icon [icon]="deleteIcon" class="ml-3 cursor-pointer"></fa-icon>
+                                <button>
+                                    <fa-icon [icon]="deleteIcon" class="ml-3 cursor-pointer"></fa-icon>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -46,7 +48,7 @@
                                 <span class="text">Total</span>
                                 <span class="price">₹{{cartSummary.total}}</span>
                             </div>
-                            <button (click)="checkut()" type="button" class="btn bg-[#386BC0] hover:bg-[#386BC0] text-white">Checkout</button>
+                            <button (click)="checkout()" type="button" class="btn bg-[#386BC0] hover:bg-[#386BC0] text-white">Checkout</button>
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,7 @@
     <div class="row">
         <div class="col-lg-9">
             <div class="accordion" id="accordionPayment">
+                <p class="text-success text-center text-xl">{{orderMsg}}</p>
                 <div class="accordion-item mb-3 p-7">
                     <h1 class="font-bold text-3xl text-center mb-5 text-[#198754]">Checkout</h1>
                     <form #orderData="ngForm" (ngSubmit)="orderNow(orderData.value)">
@@ -25,8 +26,7 @@
                             <input type="text" id="" class="form-control" name="contact" placeholder="Enter contact details" ngModel />
                         </div>
                         <!-- Submit button -->
-                        <button type="submit" class="bg-[#198754] text-white pt-2 pb-2 pl-6 pr-6 rounded-lg w-[100%] hover:bg-[#198754d4] mb-3">Order
-                            Now</button>
+                        <button type="submit" class="bg-[#198754] text-white pt-2 pb-2 pl-6 pr-6 rounded-lg w-[100%] hover:bg-[#198754d4] mb-3">Order Now</button>
                     </form>
 
                 </div>
@@ -52,7 +52,7 @@
                     <div class="d-flex justify-content-between mb-4 small">
                         <span>TOTAL</span> <strong class="text-dark">₹{{totalPrice}}</strong>
                     </div>
-                    <button class="btn btn-success w-100 mt-2">Place order</button>
+                    <!-- <button class="btn btn-success w-100 mt-2">Place order</button> -->
                 </div>
             </div>
         </div>

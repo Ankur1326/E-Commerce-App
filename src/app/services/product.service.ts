@@ -101,12 +101,22 @@ export class ProductService {
   }
 
   orderNow(data: Order) {
-    return this.http.post("http://localhost:3000/order", data)
+    return this.http.post("http://localhost:3000/orders", data)
   }
 
   orderedList() {
     let userStore = localStorage.getItem('user')
     let userData = userStore && JSON.parse(userStore);
-    return this.http.get("http://localhost:3000/cart?userId=" + userData.id);
+    return this.http.get<Order[]>("http://localhost:3000/orders?userId=" + userData.id);
+  }
+
+  deleteCartItem(cartId: number) {
+    return this.http.delete("http://localhost:3000/cart/" + cartId).subscribe(() => {
+      this.cartData.emit([])
+    })
+  }
+
+  cancelOrder(orderId: number) {
+    return this.http.delete("http://localhost:3000/orders/"+orderId)
   }
 }
