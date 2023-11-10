@@ -19,8 +19,9 @@
                             <div class="d-flex gap-4 flex-row align-items-center mr-[10%]">
                                 <span class="d-block">Quantity : {{cart.quantity}}</span>
                                 <span class="d-block ml-5 font-weight-bold">Price : ₹{{cart.price}}</span>
-                                <button>
+                                <button (click)="removeToCart(cart.id)" class="btn btn-danger text-[12px]">
                                     <fa-icon [icon]="deleteIcon" class="ml-3 cursor-pointer"></fa-icon>
+                                    Remove To Cart 
                                 </button>
                             </div>
                         </div>

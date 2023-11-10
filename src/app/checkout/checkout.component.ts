@@ -51,7 +51,7 @@ export class CheckoutComponent {
     this.product.orderNow(orderData).subscribe((result) => {
       if (result) {
         // alert('Order Placed')
-        this.orderMsg = "Order hav been placed"
+        this.orderMsg = "Order has been placed"
         setTimeout(() => {
           this.orderMsg = undefined
           this.router.navigate(['my-order'])
